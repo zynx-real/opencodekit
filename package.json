@@ -1,0 +1,95 @@
+{
+  "name": "opencodekit-agent",
+  "version": "0.3.0",
+  "description": "A provider-neutral, permission-aware AI coding agent for your terminal",
+  "type": "module",
+  "license": "MIT",
+  "author": "zynx-real",
+  "homepage": "https://github.com/zynx-real/opencodekit#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zynx-real/opencodekit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zynx-real/opencodekit/issues"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "bin": {
+    "opencodekit": "dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE",
+    "SECURITY.md",
+    "THIRD_PARTY_NOTICES.md"
+  ],
+  "scripts": {
+    "dev": "tsx src/cli/index.ts",
+    "build": "tsup && node scripts/postbuild.mjs",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:integration": "vitest run tests/integration",
+    "lint": "eslint .",
+    "format": "prettier --check .",
+    "format:write": "prettier --write .",
+    "prepublishOnly": "npm run verify",
+    "prepare": "npm run build",
+    "verify": "npm run format && npm run lint && npm run typecheck && npm test && npm run build"
+  },
+  "keywords": [
+    "ai",
+    "coding-agent",
+    "terminal",
+    "cli",
+    "mcp"
+  ],
+  "dependencies": {
+    "@ai-sdk/amazon-bedrock": "^5.0.62",
+    "@ai-sdk/anthropic": "^4.0.42",
+    "@ai-sdk/azure": "^4.0.49",
+    "@ai-sdk/cerebras": "^3.0.37",
+    "@ai-sdk/cohere": "^4.0.30",
+    "@ai-sdk/deepinfra": "^3.0.37",
+    "@ai-sdk/fireworks": "^3.0.40",
+    "@ai-sdk/google": "^4.0.51",
+    "@ai-sdk/groq": "^4.0.31",
+    "@ai-sdk/mcp": "^2.0.37",
+    "@ai-sdk/mistral": "^4.0.33",
+    "@ai-sdk/openai": "^4.0.47",
+    "@ai-sdk/openai-compatible": "^3.0.37",
+    "@ai-sdk/perplexity": "^4.0.32",
+    "@ai-sdk/togetherai": "^3.0.38",
+    "@ai-sdk/xai": "^4.0.44",
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "ai": "^7.0.79",
+    "commander": "^15.0.0",
+    "diff": "^9.0.0",
+    "env-paths": "^4.0.0",
+    "fast-glob": "^3.3.3",
+    "ink": "^7.1.1",
+    "react": "^19.2.8",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/diff": "^7.0.2",
+    "@types/node": "^26.3.0",
+    "@types/react": "^19.2.18",
+    "@vitest/coverage-v8": "^4.1.11",
+    "eslint": "^10.9.1",
+    "prettier": "^3.9.6",
+    "tsup": "^8.5.1",
+    "tsx": "^4.23.12",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.68.0",
+    "vitest": "^4.1.11"
+  },
+  "allowScripts": {
+    "esbuild@0.27.7": true,
+    "esbuild@0.28.2": true
+  }
+}
