@@ -2,6 +2,13 @@
 
 All notable changes to OpenCodeKit are documented here. The project follows semantic versioning after `1.0.0`; pre-1.0 releases may contain breaking changes in minor versions.
 
+## [0.3.1] - 2026-08-25
+
+### Fixed
+
+- GitHub release installation now works with standard npm and CachyOS's hardened npm 12 defaults.
+- Release archives install without requiring a build lifecycle script.
+
 ## [0.3.0] - 2026-08-25
 
 ### Added
@@ -18,4 +25,5 @@ All notable changes to OpenCodeKit are documented here. The project follows sema
 - Provider switching no longer silently retains an incompatible model selection.
 - Headless output remains undecorated and machine-readable.
 
+[0.3.1]: https://github.com/zynx-real/opencodekit/releases/tag/v0.3.1
 [0.3.0]: https://github.com/zynx-real/opencodekit/releases/tag/v0.3.0

@@ -1,6 +1,6 @@
 {
   "name": "opencodekit-agent",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "A provider-neutral, permission-aware AI coding agent for your terminal",
   "type": "module",
   "license": "MIT",
@@ -37,7 +37,6 @@
     "format": "prettier --check .",
     "format:write": "prettier --write .",
     "prepublishOnly": "npm run verify",
-    "prepare": "npm run build",
     "verify": "npm run format && npm run lint && npm run typecheck && npm test && npm run build"
   },
   "keywords": [

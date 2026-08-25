@@ -32,14 +32,20 @@ Done. Validation now runs before submission and the eight focused tests pass.
 
 OpenCodeKit requires Node.js 20 or newer.
 
-Install the latest GitHub version:
+Install the latest GitHub release:
 
 ```bash
-npm install -g github:zynx-real/opencodekit
+npm install -g https://github.com/zynx-real/opencodekit/releases/download/v0.3.1/opencodekit-agent-0.3.1.tgz
 opencodekit
 ```
 
-The npm package identifier is `opencodekit-agent` and the executable is `opencodekit`. A registry installation command will be documented after the first npm release; the existing unscoped `opencodekit` package belongs to another project.
+CachyOS currently ships npm with remote-package fetching disabled by default. Allow this exact remote installation for the command above:
+
+```bash
+npm install -g https://github.com/zynx-real/opencodekit/releases/download/v0.3.1/opencodekit-agent-0.3.1.tgz --allow-remote=all
+```
+
+The npm package identifier is `opencodekit-agent` and the executable is `opencodekit`. A registry installation command will be documented after the first npm registry release; the existing unscoped `opencodekit` package belongs to another project.
 
 For local development:
 
