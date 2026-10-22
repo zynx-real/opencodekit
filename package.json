@@ -63,7 +63,7 @@
     "@ai-sdk/perplexity": "^4.0.32",
     "@ai-sdk/togetherai": "^3.0.38",
     "@ai-sdk/xai": "^4.0.44",
-    "@modelcontextprotocol/sdk": "^1.30.0",
+    "@modelcontextprotocol/sdk": "^1.32.0",
     "ai": "^7.0.79",
     "commander": "^15.0.0",
     "diff": "^9.0.0",
